@@ -3,19 +3,48 @@ window.addEventListener('DOMContentLoaded', event => {
     let vowelBut = document.getElementById('vowels')
     let textBoxFinal = document.querySelector('.textbox-final')
     let spongeBut = document.getElementById('sponge')
+    let uwuBut = document.getElementById('uwu')
     vowelBut.addEventListener('click', event => {
         let result = vowelRemover(textBox.value);
         textBoxFinal.innerHTML = result;
-    })
+    });
 
     spongeBut.addEventListener('click', event => {
-        console.log('hello')
         let result = spongeMock(textBox.value);
         textBoxFinal.innerHTML = result;
-    })
+    });
+
+    uwuBut.addEventListener('click', event => {
+        console.log('here')
+        let result = uwuMaker(textBox.value);
+        textBoxFinal.innerHTML = result;
+    });
 
 
 
+
+
+
+    function uwuMaker(str){
+        let final = [];
+        let newSent = str.split(' ');
+        for (let i = 0; i < newSent.length; i++){
+            let word = newSent[i];
+            for(let j = 0; j < word.length; j++){
+                let letter = word[j];
+                if(letter.toLowerCase() === 'l'  || letter.toLowerCase() === 'r'){
+                    letter = 'w';
+                    final.push(letter);
+                } else if(letter === 'e'){
+                    final.push(`y${letter}`)
+                } else{
+                final.push(letter)
+                }
+            }
+            final.push(' ')
+        };
+        return final.join('');
+    };
 
     function toggleCase(str) {
         if (str.length !== 1) return str;
@@ -60,3 +89,10 @@ window.addEventListener('DOMContentLoaded', event => {
         return final.join('');
     };
 })
+
+
+
+
+// l = w
+// r = w
+// e is followed by y

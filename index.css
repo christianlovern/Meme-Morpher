@@ -23,11 +23,19 @@
 #vowels{
     display: inline-block;
     background-color: tomato;
+    margin: 5px;
 }
 #sponge{
     display: inline-block;
     background-color: yellow;
+    margin: 5px;
 }
+#uwu{
+    display: inline-block;
+    background-color: pink;
+    margin: 5px;
+}
+
 
 
 .textbox-final{
