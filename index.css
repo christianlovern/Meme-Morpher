@@ -16,12 +16,19 @@
     margin-right: auto;
     background-color: rgb(78, 196, 180);
 }
-
-#submit{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#buttons {
+    text-align: center;
 }
+
+#vowels{
+    display: inline-block;
+    background-color: tomato;
+}
+#sponge{
+    display: inline-block;
+    background-color: yellow;
+}
+
 
 .textbox-final{
     display: block;
